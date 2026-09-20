@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/favorico.png') }}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/reset.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Parking Panel</title>
+</head>
+<body>
+
+    <div class="content">
+        <header>
+           
+                <img class="logo" src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo du site">
+            
+                <ul>
+               
+                    <li><img class="icons8 loop" src="https://img.icons8.com/ios-filled/50/ababab/search--v1.png" alt=""></li>
+                    <li><img class="icons8" src="https://img.icons8.com/sf-regular/48/ababab/appointment-reminders.png" alt=""></li>
+                    <li class="profil-content">
+                        <p>Bonjour, Mercier</p>
+                        <img class="profil-img" src="{{ url_for('static', filename='img/pic.jpg') }}" alt="Logo du site">
+                    </li>
+                </ul>
+
+
+        </header>
+        <main>
+
+            <div class="detail">
+                <p class="state">ETAT DE LA BARRIERE - <span id="time">00:00:00</span></p>
+
+                <div class="raison">
+                    <h2>Raison ouverture</h2>
+                    <form>
+                        <label>
+                            <input type="radio" name="option" value="entrer">
+                            Entrée
+                        </label>
+                        
+                        
+                        <label>
+                            <input type="radio" name="option" value="sortir">
+                            Sortie
+                        </label>
+                       
+                        
+                        <label>
+                            <input type="radio" name="option" value="Inconnue">
+                            Inconnue
+                        </label>
+                        
+                        
+                    </form>
+
+                    <div>
+                        <button>Annuler</button>
+                        <button>Confirmer</button>
+                    </div>
+                </div>
+
+                <div class="p-sign">
+                    <div class="sign-content">
+                        <div class="sign ouvert"></div>
+                        <p>Ouvert</p>
+                    </div>
+    
+                    
+                    <div class="sign-content">
+                        <div class="sign fermer"></div>
+                        <p>Fermer</p>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+            <div  class="barriere">
+                <div class="porte-content">
+                    <div class="porte">O</div>
+                    <div class="porte">F</div>
+                </div>
+
+            </div>
+
+
+    
+        </main>
+        <footer>
+            <p class="state">DETAILS</p>
+
+            <div class="details-content">
+                <div>
+                    <p class="label">Raison Ouverture</p>
+                    <p id="because" class="valeur">N/A</p>
+                </div>
+
+                <div>
+                    <p class="label">Source</p>
+                    <p id="source" class="valeur">Gardien</p>
+                </div>
+
+                <div>
+                    <p class="label">Nombres vehicules</p>
+                    <p id="nbr" class="valeur">100</p>
+                </div>
+
+                <div>
+                    <button id="operating-btn" class="btn-ouvrir">Ouvrir</button>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+</body>
+</html>
